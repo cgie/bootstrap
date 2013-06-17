@@ -4,13 +4,15 @@
 
 
 .jumbotron {
-  padding: 30px;
+  padding-top: 30px;
   margin-bottom: 30px;
   font-size: (@font-size-base * 1.5);
   font-weight: 200;
   line-height: (@line-height-base * 1.5);
   color: @jumbotron-lead-color;
-  background-color: @jumbotron-bg;
+//  background-image: url('../img/squairy_light.png');
+  background-color: fade(@jumbotron-bg, 30%);
+
   h1 {
     line-height: 1;
     color: @jumbotron-heading-color;
@@ -22,7 +24,7 @@
 
 @media screen and (min-width: @screen-tablet) {
   .jumbotron {
-    padding: 50px 60px;
+    padding-top: 50px;
     border-radius: @border-radius-large; // Only round corners at higher resolutions
 
     h1 {

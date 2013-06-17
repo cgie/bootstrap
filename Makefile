@@ -18,8 +18,8 @@ build:
 	@jshint js/*.js --config js/.jshintrc
 	@jshint js/tests/unit/*.js --config js/.jshintrc
 	@echo "             ${CHECK}"
-	@printf "Compiling LESS with Recess..."
-	@recess --compile ${BOOTSTRAP_LESS} > ${BOOTSTRAP}
+	@printf "Compiling LESS with lessc..."
+	@lessc -x ${BOOTSTRAP_LESS} > ${BOOTSTRAP}
 	@echo "               ${CHECK}"
 	@printf "Prepping documentation assets..."
 	@cp fonts/* docs/assets/fonts/
@@ -81,12 +81,14 @@ bootstrap/js/*.js: js/*.js
 # CSS COMPILE
 #
 
-bootstrap-css: bootstrap/css/*.css
+bootstrap-css: font-awesome bootstrap/css/*.css
 
 bootstrap/css/*.css: less/*.less
 	mkdir -p bootstrap/css
-	recess --compile ${BOOTSTRAP_LESS} > bootstrap/css/bootstrap.css
-	recess --compress ${BOOTSTRAP_LESS} > bootstrap/css/bootstrap.min.css
+	lessc -x ${BOOTSTRAP_LESS} > bootstrap/css/bootstrap.css
+	lessc -x ${BOOTSTRAP_LESS} > bootstrap/css/bootstrap.min.css
+
+font-awesome: font-awesome/less/*.less
 
 #
 # FONTS
