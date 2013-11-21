@@ -51,7 +51,7 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:         @magenta;
+@brand-primary:         @blue;
 @brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
@@ -61,7 +61,7 @@
 // -------------------------
 
 @body-bg:               @rebase03;
-@text-color:            @rebase0;
+@text-color:            @gray-dark;
 
 // Links
 // -------------------------
@@ -300,13 +300,13 @@
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 
 // Navbar links
-@navbar-link-color:                @rebase01;
-@navbar-link-hover-color:          @rebase02;
-@navbar-link-hover-bg:             transparent;
-@navbar-link-active-color:         @navbar-link-hover-color;
-@navbar-link-active-bg:            darken(@navbar-bg, 10%);
-@navbar-link-disabled-color:       darken(@navbar-bg, 50%);
-@navbar-link-disabled-bg:          transparent;
+@navbar-default-link-color:                @rebase01;
+@navbar-default-link-hover-color:          @rebase02;
+@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         @navbar-default-link-hover-color;
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color:       darken(@navbar-default-bg, 50%);
+@navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
 @navbar-default-brand-color:               @navbar-default-link-color;
@@ -320,6 +320,8 @@
 
 
 // Inverted navbar
+//
+// Reset inverted navbar basics
 @navbar-inverse-color:                       @gray-light;
 @navbar-inverse-bg:                         @rebase02;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
@@ -434,10 +436,6 @@
 @tooltip-arrow-width:         5px;
 @tooltip-arrow-color:         @tooltip-bg;
 
-@popover-bg:                  #fff;
-@popover-arrow-width:         10px;
-@popover-arrow-color:         #fff;
-@popover-title-bg:            darken(@popover-bg, 3%);
 
 // Popovers
 // -------------------------
@@ -508,10 +506,6 @@
 @alert-danger-text:           @state-danger-text;
 @alert-danger-border:         @state-danger-border;
 
-@alert-info-bg:               @state-info-bg;
-@alert-info-text:             @state-info-text;
-@alert-info-border:           @state-info-border;
-
 
 // Progress bars
 // -------------------------
@@ -535,6 +529,10 @@
 @list-group-active-color:     @component-active-color;
 @list-group-active-bg:        @component-active-bg;
 @list-group-active-border:    @list-group-active-bg;
+
+@list-group-link-color:          #555;
+@list-group-link-heading-color:  #333;
+
 
 // Panels
 // -------------------------
@@ -605,9 +603,6 @@
 @breadcrumb-active-color:     @gray-light;
 @breadcrumb-separator:        "/";
 
-// Tiny screen / phone
-@screen-tiny:                480px;
-@screen-phone:               @screen-tiny;
 
 // Carousel
 // ------------------------
