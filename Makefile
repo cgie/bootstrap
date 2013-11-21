@@ -1,2 +1,2 @@
 default:
-	lessc --compress less/bootstrap.less > bootstrap/css/bootstrap.css
+	lessc --compress less/bootstrap.less > dist/css/bootstrap.css
